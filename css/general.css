@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/* Shorthand:
+
+Margin: 40px; all 4 sides
+Margin: 40px auto; top/bottom right/left (top/bottom is 40px, left/right is none)
+Margin: 40px auto 0; top, right/left, bottom
+Margin: 40px 30px 5px 10px; top=40, right=30, bottom=5, left=10
+
+Start at the top, then continue clockwise around the box.
+
+Units of Measurment:
+
+Width = %
+Height = rem
+Type = rem
+Graphics = px
+
+Reminder: the child determines the height of the parent element.
+
+*/
+
+/* Control Size of the viewport */
+
+@-moz-viewport { width: device-width; scale: 1; } /* Firefox */
+@-ms-viewport { width: device-width; scale: 1; } /* Microsoft */
+@-o-viewport { width: device-width; scale: 1; } /* Opera */
+@-webkit-viewport { width: device-width; scale: 1; } /* Safari & Chrome */
+@viewport { width: device-width; scale: 1; } /* W3C Standard */
+
+/* Adjust padding so it draws on the box interior */
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Controls the zoom on mobile */
+
+html {
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+    
+    /* Controls the default font size */
+    
+    font-size: 100%; /* 100% = 16px = 1rem */
+    
+    font-family: Georgia, Times, Serif;
+}
+
+img { /* images are responsive */
+	width: 100%;
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.masthead {
+    background-color: maroon;
+    overflow: hidden;
+}
+
+.logo {
+    height: 4.5rem;
+    width: auto;
+    margin: .5rem 5%;
+
+        /* float right; */
+        
+     /* display: block;
+    margin: .5rem auto;
+    This is a cheat for Float Center since you cannot simply Float Center*/
+}
+
+article {
+    margin: 0;
+    padding: 0 5%;
+    overflow: hidden; /* forces parent to wrap around its child */
+    /* background-color: grey */
+}
+
+H1 {
+    margin: 1.5rem 0;
+    font-size: 5rem;
+    line-height: 4.5rem;
+    
+}
+
+h1 + p {
+    
+font-size: 1.25rem;
+font-weight: bold;
+    
+}
+
+p {
+    line-height: 1.5rem;
+    margin: 0 0 1.5rem;
+    
+}
+    
+figure {
+    margin: 0 auto 1.5rem; /* auto in case we want smaller*/
+    width: 100%; /* Size can be smaller, but not larger than 100% */
+}    
+
+figcaption {
+    margin: .5rem 0 0;
+    font-size: .75rem;
+    
+}
+
+footer {
+    background-color: maroon;
+    overflow: hidden;
+    
+}
+
+footer p {
+    margin: .5rem 5% 5rem;
+    color: white;
+    font-size: .75rem;
+
+}
+
+footer a {
+    color: white;
+}    
